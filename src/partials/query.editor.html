@@ -1,0 +1,24 @@
+<query-editor-row query-ctrl="ctrl" can-collapse="true">
+
+
+
+	<div ng-repeat="agg in ctrl.target.metrics">
+		<rtc-metric-agg
+			target="ctrl.target" index="$index"
+      get-stores="ctrl.getStores()"
+			get-fields="ctrl.getFields($store)"
+			on-change="ctrl.queryUpdated()"
+			>
+		</rtc-metric-agg>
+	</div>
+
+	<div ng-repeat="agg in ctrl.target.groupBys">
+		<rtc-bucket-agg
+			target="ctrl.target" index="$index"
+      get-stores="ctrl.getStores()"
+			get-fields="ctrl.getFields($store)"
+			on-change="ctrl.queryUpdated()">
+		</rtc-bucket-agg>
+	</div>
+
+</query-editor-row>

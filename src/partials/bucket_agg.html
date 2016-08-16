@@ -1,0 +1,28 @@
+<div class="gf-form-inline">
+		<label class="gf-form-label query-keyword width-7">
+			<span ng-show="isFirst">Group by</span>
+			<span ng-hide="isFirst">Then by</span>
+		</label>
+  <select ng-model="by.type"  ng-change="onTypeChanged()">
+    <option ng-repeat="s in bucketAggTypes">{{s.text}}</option>
+  </select>
+  <select ng-if="requiresField" ng-model="by.field"  ng-change="onFieldChanged()">
+    <option ng-repeat="f in target.fields">{{f.name}}</option>
+  </select>
+		<input ng-if="requiresInterval" type="text"  ng-model="by.interval" />
+	</div>
+
+
+	<div class="gf-form">
+		<label class="gf-form-label" ng-if="isFirst">
+			<a class="pointer" ng-click="addBucketAgg()"><i class="fa fa-plus"></i></a>
+		</label>
+		<label class="gf-form-label">
+			<a class="pointer" ng-click="removeBucketAgg()"><i class="fa fa-minus"></i></a>
+		</label>
+	</div>
+</div>
+
+
+
+

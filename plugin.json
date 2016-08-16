@@ -1,0 +1,29 @@
+{
+  "type": "datasource",
+  "name": "inovia-insight",
+  "id": "inovia-insight",
+  "staticRoot": ".",
+  "info": {
+    "description": "Inovia-insight Data Source for Grafana",
+    "author": {
+      "name": "Bo Zhang",
+      "url": "http://inovia.nu"
+    },
+    "keywords": ["inovia","insight"],
+    "logos": {
+      "small": "img/inovia_logo01.png",
+      "large": "img/inovia_logo01.png"
+    },
+    "links": [
+      {"name": "inovia.nu", "url": "http://www.inovia.nu"}
+    ],
+    "version": "0.1.0"
+  },
+
+  "annotations": true,
+  "metrics": true,
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": [ ]
+  }
+}
